@@ -1,0 +1,32 @@
+<launch>
+<node pkg="airsim-ros" type="airsim_control" name="airsim_control" output="screen">
+<!-- 高度 -->
+<param name="kp" value="0.10"/>
+<param name="ki" value="0.0010"/>
+<param name="kd" value="1.5"/>
+<param name="max" value="5"/>
+<!-- 高度2 -->
+<param name="kp2" value="0.01"/>  
+<param name="ki2" value="0.00008"/>
+<param name="kd2" value="1"/>
+<param name="max2" value="5"/>
+
+<!-- PITCH ROLL -->
+<param name="p_pr" value="0.0020"/>
+<param name="i_pr" value="0"/>
+<param name="d_pr" value="0.10"/>
+<param name="max_pr" value="0.025"/>
+<!-- 延时 -->
+
+<param name="delay_plane_find" value="35"/><!-- 寻找停机坪 -->
+<param name="delay_takeoff" value="20"/><!-- 起飞 -->
+<param name="delay_unknown_find" value="8"/><!-- 寻找其他 -->
+<param name="delay_circle" value="100"/><!-- 穿过障碍圈 -->
+ <!-- 二维码 -->
+<param name="aruco_first" value="100"/>
+<param name="aruco_other" value="25"/>
+<!-- 20 -->
+
+</node>
+
+</launch>

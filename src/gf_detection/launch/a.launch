@@ -1,0 +1,17 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="camera_nodelet" args="manager" output="screen"/>
+  <!-- Construct point cloud of the rgb and depth topics -->
+
+    <node pkg="nodelet" type="nodelet" name="point_cloud_xyz" args="load depth_image_proc/point_cloud_xyz camera_nodelet --no-bond"  output="screen">
+    <remap from="camera_info" to="/airsim/image/front/camera_info" />  
+    <remap from="image_rect" to="/airsim/image/front/depth"/>  
+   
+  </node>
+
+
+  <node
+    name="tf_map_odom"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 map image 40" />
+</launch>

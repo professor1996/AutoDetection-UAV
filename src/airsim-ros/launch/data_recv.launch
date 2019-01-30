@@ -1,0 +1,11 @@
+<launch>
+<node pkg="airsim-ros" type="airsim_image_front_rgb" name="airsim_image_front_rgb" output="screen"/>
+<node pkg="airsim-ros" type="airsim_image_front_depth" name="airsim_image_front_depth" output="screen"/>
+<node pkg="airsim-ros" type="airsim_image_down" name="airsim_image_down" output="screen"/>
+<node pkg="airsim-ros" type="airsim_imu" name="airsim_imu" output="screen"/>
+
+<node pkg="airsim-ros" type="airsim_magnetic" name="airsim_magnetic" output="screen"/>
+
+<node pkg="airsim-ros" type="airsim_barometer" name="airsim_barometer" output="screen"/>
+<include file="$(find imu_filter_madgwick)/launch/madgwick.launch"/>
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+<include file="$(find airsim-ros)/launch/control.launch"/>
+<include file="$(find airsim-ros)/launch/data_recv.launch"/>
+<include file="$(find airsim-ros)/launch/image.launch"/>
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+<node pkg="gf_detection" type="down" name="down" output="screen"/>
+<node pkg="gf_detection" type="depth" name="depth" output="screen"/>
+<node pkg="gf_detection" type="front" name="front" output="screen"/>
+<node pkg="gf_detection" type="aruco.py" name="aruco" output="screen"/>
+<node pkg="gf_detection" type="lsd.py" name="line" output="screen"/>
+<!-- <node pkg="gf_detection" type="circle.py" name="circle" output="screen"/> -->
+<!-- <node pkg="gf_perception" type="gaofen.py" name="gaofen_perception" output="screen"/> -->
+
+</launch>
